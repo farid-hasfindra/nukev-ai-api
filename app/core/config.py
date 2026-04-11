@@ -11,6 +11,11 @@ class Settings(BaseSettings):
     
     # LLM Configuration
     GROQ_API_KEY: str
+    
+    # TMDB Configuration
+    TMDB_API_KEY: str
+    TMDB_READ_ACCESS_TOKEN: str
+
     model_config = SettingsConfigDict(
         env_file=".env", 
         env_file_encoding="utf-8", 

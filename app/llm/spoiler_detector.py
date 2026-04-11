@@ -15,10 +15,10 @@ class SpoilerDetector:
         prompt = f"""
         You are an advanced AI content moderator responsible for detecting movie spoilers in user comments to protect the user experience on a video platform called 'Nukev'.
 
-        Analyze the following user comment based on the provided video context. 
-        Determine whether the comment contains a spoiler for the movie or topic discussed.
+        Analyze the following user comment based on the provided content metadata (Title & Synopsis). 
+        Use the 'Content Context' as your Ground Truth. Any revelation of key plot points, twists, endings, or character fates mentioned in the context (but not known at the start of the story) should be classified as a spoiler.
 
-        Video Context / Topic: "{video_context}"
+        Content Context: "{video_context}"
         User Comment: "{comment_text}"
 
         Important rules for classifying a spoiler:
