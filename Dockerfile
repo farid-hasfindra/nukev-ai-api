@@ -2,11 +2,9 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# Install dependencies yang dibutuhkan sistem jika ada (misal ffmpeg untuk video)
+# Install dependencies yang dibutuhkan sistem (build-essential untuk beberapa paket python)
 RUN apt-get update && apt-get install -y \
     build-essential \
-    curl \
-    software-properties-common \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy requirements dan install
