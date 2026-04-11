@@ -14,6 +14,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy seluruh source code
 COPY . .
 
+# Tambahkan path aplikasi ke PYTHONPATH
+ENV PYTHONPATH=/app
+
 # Expose port 7860 (Standar Hugging Face Spaces)
 EXPOSE 7860
 
