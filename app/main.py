@@ -22,6 +22,7 @@ async def root():
     return {"message": "Welcome to Nukev AI Backend API"}
 
 # Include Routers
-from app.api.v1 import api_router
+from app.api.v1 import comments, media
 
-app.include_router(api_router, prefix=settings.API_V1_STR)
+app.include_router(comments.router, prefix=f"{settings.API_V1_STR}/comments", tags=["comments"])
+app.include_router(media.router, prefix=f"{settings.API_V1_STR}/media", tags=["media"])
